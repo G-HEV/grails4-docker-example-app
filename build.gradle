@@ -101,3 +101,8 @@ tasks.withType(Test) {
     systemProperty "webdriver.chrome.driver", System.getProperty('webdriver.chrome.driver')
     systemProperty "webdriver.gecko.driver", System.getProperty('webdriver.gecko.driver')
 }
+
+bootWar {
+    // Set a custom name for application artifact
+    archiveName 'application.war'
+}
