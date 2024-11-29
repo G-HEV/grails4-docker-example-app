@@ -1,0 +1,21 @@
+version: '3.6'
+
+services:
+  dev-vm:
+    container_name: dev-vm
+    image: my-grails-app
+    build:
+        context: .
+        dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/home/grails4-docker-example-app/
+    environment:
+      - TZ=Europe/Warsaw
+    command:
+      - /bin/bash
+      - -c
+      - |
+        cd /home/grails4-docker-example-app
+        ./gradlew bootRun

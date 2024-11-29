@@ -1,17 +1,17 @@
-# Grails 4 example application using Docker
+# grails4-docker-example-app
 
-Grails 4 example application using Docker
+## Project setup
 
-## Instructions
+Im directory run command
 
-Create docker image with:
 ```
-docker build -t my-app:latest .
-```
-
-Run application with:
-```
-docker run -p 8080:8080 --name my_app_container my-app:latest
+docker-compose up
 ```
 
-Access the application at: http://localhost:8080
+
+After lounch 
+
+Go to http://localhost:8080/ in your browser
+
+
+
