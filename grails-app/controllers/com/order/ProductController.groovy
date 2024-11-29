@@ -10,8 +10,12 @@ class ProductController {
     }
 
     def createProduct(ProductCO productCO) {
-        //toDo implement add products
-        render 200
+        if(productCO.validate()){
+            //toDo implement add products
+
+            render 200
+        }
+        response.sendError(400);
     }
 
     def productList() {
