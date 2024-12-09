@@ -3,14 +3,14 @@ package com.order
 import grails.converters.JSON
 
 
-class ProductList{
+class ProductList {
 
-    private List list=[]
-    ProductList(){
+    List list = []
 
+    ProductList() {
     }
 
-    JSON toJSON(){
+    JSON toJSON() {
         return list as JSON;
     }
 }
