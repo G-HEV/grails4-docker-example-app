@@ -3,7 +3,9 @@ package com.website
 
 class WebsiteContentController {
 
-    PageContentService pageContentService;
+    PageContentService pageContentService
+
+    static allowedMethods = [getPageContent: 'GET']
 
     def index() {
         render "jestes w kontrolerze WebsiteContent"
@@ -11,11 +13,10 @@ class WebsiteContentController {
     }
 
     def getPageContent(RequestCO requestCO) {
-        if(requestCO.validate()){
-            /*todo przekazać odpowiednie dane*/
-            render pageContentService.getPageContent()
+        if (requestCO.validate()) {
+            render pageContentService.getPageContent(requestCO.url)
             return
         }
-        response.sendError(400);
+        response.sendError(400)
     }
 }
